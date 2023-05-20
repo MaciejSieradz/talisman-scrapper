@@ -10,7 +10,7 @@ In order to be able to run application, you need to set your environment:
 ```bash
 source environment/bin/activate
 ```
-You also need to create file `uri.txt` with your mongoDB URI. Check mongoDB documentation here:  [MongoDB Atlas Documentation](https://www.mongodb.com/docs/manual/reference/connection-string/).
+You also need to create file `talisman/uri.txt` with your mongoDB URI. Check mongoDB documentation here:  [MongoDB Atlas Documentation](https://www.mongodb.com/docs/manual/reference/connection-string/).
 
 After that you can just run both scripts
  - `get_decks.py` - Scrapping and adding every deck(except of adventure deck) to your database.
@@ -25,4 +25,4 @@ talismanwiki. If you want to be 100% sure about every single card, probably the 
 
 ## Special thanks
 
-I would also like to thank creators of [Talisman wik](https://wiki.magiaimiecz.eu/Strona_g%C5%82%C3%B3wna). Huge credits for their work!
+I would also like to thank creators of [Talisman wiki](https://wiki.magiaimiecz.eu/Strona_g%C5%82%C3%B3wna). Huge credits for their work!
