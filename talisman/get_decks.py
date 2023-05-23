@@ -20,7 +20,7 @@ cataclysm_url = 'https://wiki.magiaimiecz.eu/Kategoria:Talia_Pozosta%C5%82o%C5%9
 
 def _add_card_to_deck(card: scrapper.Card) -> dict:
     return {
-        '_id': card.name,
+        'name': card.name,
         'type': card.card_type,
         'subtype': card.card_subtype,
         'fight_statistic': card.fighting_attribute,
