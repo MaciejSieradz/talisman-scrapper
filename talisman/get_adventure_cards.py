@@ -76,8 +76,13 @@ if __name__ == "__main__":
 
 
     dbname = client['talisman']
-    collection = dbname['adventure_deck']
+    collection = dbname['cards']
+
+    cards = []
+
     for adventure_card in sorted(adventure_deck, key=lambda card: card.name):
-        collection.insert_one(_add_card_to_deck(adventure_card))
+        cards.append(_add_card_to_deck(adventure_card))
+
+    collection.insert_one({'name_of_deck': 'adventure_deck', 'cards': cards})
 
     client.close()

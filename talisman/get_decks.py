@@ -53,9 +53,14 @@ if __name__ == "__main__":
     }
 
     dbname = client['talisman']
-    for card_collection_key, card_collection_value in cards_collection.items():
-        collection = dbname[card_collection_key]
-        for card in card_collection_value:
-            collection.insert_one(_add_card_to_deck(card))
 
+    collection = dbname['cards']
+    
+    for card_collection_key, card_collection_value in cards_collection.items():
+        cards = []
+        for card in card_collection_value:
+            cards.append(_add_card_to_deck(card))
+        collection.insert_one({'name_of_deck': card_collection_key, 'cards': cards})
+    
+            
     client.close()
